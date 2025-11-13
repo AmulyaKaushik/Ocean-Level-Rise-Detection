@@ -1,3 +1,10 @@
 City,MAE (mm),RMSE (mm),Accuracy (%),Threshold (mm)
-San_Francisco_CA,13.98,17.67,83.49,1139.15
-New_Orleans_LA,10.15,13.17,93.49,485.78
+San_Francisco_CA,21.95,28.34,78.23,1150.81
+Los_Angeles_CA,37.74,50.08,62.35,1068.08
+Seattle_WA,46.7,60.17,41.32,2285.92
+Miami_FL,27.86,40.44,92.14,660.33
+New_York_NY,58.96,74.68,74.81,1190.51
+Boston_MA,40.48,55.42,77.73,2107.04
+New_Orleans_LA,20.79,29.5,88.66,469.76
+Galveston_TX,25.68,34.02,90.23,606.4
+Honolulu_HI,13.38,16.64,92.75,497.09
