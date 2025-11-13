@@ -61,7 +61,14 @@ def fetch_noaa_historical(station_id, days=365):
 def main():
     stations = {
         "San_Francisco_CA": "9414290",
-        "New_Orleans_LA": "8761724"
+        "Los_Angeles_CA": "9410660",
+        "Seattle_WA": "9447130",
+        "Miami_FL": "8723214",
+        "New_York_NY": "8518750",
+        "Boston_MA": "8443970",
+        "New_Orleans_LA": "8761724",
+        "Galveston_TX": "8771450",
+        "Honolulu_HI": "1612340",
     }
 
     for city, station_id in stations.items():
@@ -70,9 +77,9 @@ def main():
             hist_data = fetch_noaa_historical(station_id, days=365)
             filename = f"historical_{city}.csv"
             hist_data.to_csv(filename, index=False)
-            print(f"Saved: {filename} ({len(hist_data)} rows)")
+            print(f"✅ Saved: {filename} ({len(hist_data)} rows)")
         except Exception as e:
-            print(f"Failed for {city}: {e}")
+            print(f"⚠️ Failed for {city}: {e}")
 
 
 if __name__ == "__main__":
