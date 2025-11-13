@@ -18,18 +18,20 @@ Rising sea levels pose long-term risks to coastal regions, impacting infrastruct
 - Early warning systems
 
 ## Project Structure  
-/ (root)
+/
 │ README.md
-│ citymodels.py             ← general wrapper script
-│ citymodels_lstm.py        ← LSTM implementation
-│ citymodels_sarima.py      ← SARIMA implementation
-│ citymodels_xgb.py         ← XGBoost implementation
-│ dashboard_xgb.py          ← Dashboard / visualisation for XGBoost
-│ new_realtime_fetch.py     ← Script for fetching new data for live update
-│ plots/                    ← Contains pre-trained model .pkl files + plot exports
-│ historical_<City>.csv     ← Input historical data files
-│ forecast_<City>_<Model>.csv← Forecast output files
-│ model_accuracy_*.csv      ← Summary files of accuracy metrics
+│ citymodels.py
+│ citymodels_lstm.py
+│ citymodels_sarima.py
+│ citymodels_xgb.py
+│ dashboard_xgb.py
+│ new_realtime_fetch.py
+│ historical_<City>.csv
+│ forecast_<City><Model>.csv
+│ model_accuracy*.csv
+│
+└── plots/
+└── <City>_LSTM_model.pkl
 
 ## Data  
 - Historical tidal datasets for coastal US cities.  
