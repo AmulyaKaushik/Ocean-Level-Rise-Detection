@@ -89,6 +89,7 @@ Rising sea levels pose long-term risks to coastal regions, impacting infrastruct
 - To run the dashboard:
   - pip install streamlit plotly folium streamlit-folium streamlit-lottie
   - streamlit run dashboard.py
+  - click on this link: https://amulyakaushik-ocean-level-rise-detection-dashboard-euqmss.streamlit.app/
 
 ## Utilities
 - COMPARE_ALL_MODELS.PY — script to normalize and compare model accuracy CSVs and export a compact comparison CSV (example: `comparison_two_cities.csv`). It:
