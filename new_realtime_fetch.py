@@ -77,9 +77,9 @@ def main():
             hist_data = fetch_noaa_historical(station_id, days=365)
             filename = f"historical_{city}.csv"
             hist_data.to_csv(filename, index=False)
-            print(f"✅ Saved: {filename} ({len(hist_data)} rows)")
+            print(f" Saved: {filename} ({len(hist_data)} rows)")
         except Exception as e:
-            print(f"⚠️ Failed for {city}: {e}")
+            print(f" Failed for {city}: {e}")
 
 
 if __name__ == "__main__":

@@ -26,7 +26,7 @@ def train_lstm_model(city, city_csv_path, epochs=40, batch_size=32, days_ahead=7
     else:
         time_steps = 30
 
-    print(f"\n🏙️ Training LSTM model for {city} ...")
+    print(f"\n Training LSTM model for {city} ...")
 
     # Load dataset
     data = pd.read_csv(city_csv_path)
@@ -82,7 +82,7 @@ def train_lstm_model(city, city_csv_path, epochs=40, batch_size=32, days_ahead=7
     mean_actual = np.mean(y_test_rescaled)
     accuracy = 100 * (1 - (mae / mean_actual))
 
-    print(f"📊 {city} Evaluation → MAE: {mae:.2f} mm | RMSE: {rmse:.2f} mm | Accuracy: {accuracy:.2f}%")
+    print(f" {city} Evaluation → MAE: {mae:.2f} mm | RMSE: {rmse:.2f} mm | Accuracy: {accuracy:.2f}%")
 
     # Threshold for alerting
     threshold = max(np.quantile(values, 0.95), np.mean(values) + 2 * np.std(values))
@@ -139,7 +139,7 @@ def train_lstm_model(city, city_csv_path, epochs=40, batch_size=32, days_ahead=7
     plt.savefig(f"plots/{city}_forecast_LSTM.png", dpi=300)
     plt.close()
 
-    print(f"✅ Saved forecast & model for {city}\n")
+    print(f" Saved forecast & model for {city}\n")
     return mae, rmse, accuracy, threshold
 
 
@@ -170,10 +170,10 @@ if __name__ == "__main__":
                 "Threshold (mm)": round(thr, 2)
             })
         else:
-            print(f"⚠️ Missing file for {city}: {file_path}")
+            print(f" Missing file for {city}: {file_path}")
 
     if results:
         acc_df = pd.DataFrame(results)
         acc_df.to_csv("model_accuracy_LSTM.csv", index=False)
-        print("\n💾 All model metrics saved to model_accuracy_LSTM.csv")
+        print("\n All model metrics saved to model_accuracy_LSTM.csv")
         print(acc_df)

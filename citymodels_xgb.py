@@ -162,5 +162,5 @@ if __name__ == "__main__":
 
     acc_df = pd.DataFrame(results)
     acc_df.to_csv("model_accuracy_xgb.csv", index=False)
-    print("\n💾 Saved XGBoost model accuracy scores to model_accuracy_xgb.csv")
+    print("\n Saved XGBoost model accuracy scores to model_accuracy_xgb.csv")
     print(acc_df)
